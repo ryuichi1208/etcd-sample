@@ -1,24 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
-  "regexManagers": [
-    {
-      "fileMatch": ["^Dockerfile$", "^Makefile$"],
-      "matchStrings": ["go install (?<depName>[^@]+?)@(?<currentValue>.+)\n"],
-      "datasourceTemplate": "go"
-    },
-    {
-      "fileMatch": ["^Dockerfile$"],
-      "matchStrings": ["ENV GOLANGCI_LINT_VERSION (?<currentValue>.*?)\n"],
-      "depNameTemplate": "github.com/golangci/golangci-lint",
-      "datasourceTemplate": "go"
-    }
-  ],
-  "dockerfile": {
-    "enabled": false
-  },
-  "gomod": {
-    "enabled": false
-  }
-  "schedule": ["10 7 * * 1"]
+  "extends": [
+    "config:base"
+  ]
 }
