@@ -1,6 +1,6 @@
 module main
 
-go 1.21.4
+go 1.22.0
 
 require go.etcd.io/etcd/client/v3 v3.5.11
 
